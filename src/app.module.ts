@@ -8,11 +8,14 @@ import { UserModule } from './user/user.module';
 
 import { Speed } from './speed/entity/speed.entity';
 import { SpeedModule } from './speed/speed.module';
+import { MeasurementResult } from './measurement_result/entity/measurement_result.entity';
+import { MeasurementResultModule } from './measurement_result/measurement_result.module';
 
 @Module({
   imports: [
     UserModule,
     SpeedModule,
+    MeasurementResultModule,
     ConfigModule.forRoot({
       envFilePath: '.development.env',
     }),
@@ -23,7 +26,7 @@ import { SpeedModule } from './speed/speed.module';
       username: process.env.DB_USER,
       password: process.env.DB_PASS,
       database: process.env.DB_DATABASE,
-      entities: [User, Speed],
+      entities: [User, Speed, MeasurementResult],
       synchronize: true,
     }),
   ],

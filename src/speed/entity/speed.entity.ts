@@ -5,18 +5,18 @@ export class Speed {
   @PrimaryGeneratedColumn()
   id: string;
 
-  @Column()
+  @Column('decimal', { precision: 8, scale: 2 })
   dlStatus: number;
 
-  @Column()
+  @Column('decimal', { precision: 8, scale: 2 })
   ulStatus: number;
 
-  @Column()
+  @Column('decimal', { precision: 8, scale: 2 })
   pingStatus: number;
+
+  @Column('decimal', { precision: 8, scale: 2 })
+  jitterStatus: number;
 
   @Column()
   clientIp: string;
-
-  @Column()
-  jitterStatus: number;
 }
