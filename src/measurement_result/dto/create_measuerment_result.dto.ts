@@ -1,5 +1,5 @@
-import { UserData } from '../entity/user-data.entity';
-import { SpeedData } from '../entity/speed-data.entity';
+import { UserData } from '../entity/nested_user_data.entity';
+import { SpeedData } from '../entity/nested_speed_data.entity';
 
 export class CreateMeasurementResultDTO {
   user: UserData;

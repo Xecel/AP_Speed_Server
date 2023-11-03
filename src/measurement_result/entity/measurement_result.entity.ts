@@ -16,8 +16,8 @@ import {
 import { User } from 'src/user/entity/user.entity';
 import { Speed } from 'src/speed/entity/speed.entity';
 
-import { UserData } from './user-data.entity';
-import { SpeedData } from './speed-data.entity';
+import { UserData } from './nested_user_data.entity';
+import { SpeedData } from './nested_speed_data.entity';
 
 @Entity()
 export class MeasurementResult {

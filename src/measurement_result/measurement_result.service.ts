@@ -8,8 +8,8 @@ import { UpdateMeasurementResultDTO } from './dto/update_measuerment_result.dto'
 
 import { Request } from 'express';
 
-import { UserData } from './entity/user-data.entity';
-import { SpeedData } from './entity/speed-data.entity';
+import { UserData } from './entity/nested_user_data.entity';
+import { SpeedData } from './entity/nested_speed_data.entity';
 
 @Injectable()
 export class MeasurementResultService {

@@ -36,3 +36,7 @@ lerna-debug.log*
 
 # Environment
 .development.env
+.env
+
+# Git Message
+.gitmessage

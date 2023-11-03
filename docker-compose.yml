@@ -1,0 +1,19 @@
+version: '3'
+services:
+  my-mariadb:
+    image: mariadb:latest
+    environment:
+      MYSQL_ROOT_PASSWORD: ${DB_PASSWORD}
+      MYSQL_DATABASE: ${DB_DATABASE}
+    ports:
+      - '3306:3306'
+
+  nest-app:
+    build:
+      context: .
+    ports:
+      - '3000:3000' # Nest.js 애플리케이션 포트
+    depends_on:
+      - my-mariadb # MariaDB 컨테이너가 먼저 실행되어야 함
+    environment:
+      - DB_HOST=my-mariadb # MariaDB 컨테이너를 참조
